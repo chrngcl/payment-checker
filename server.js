@@ -11,6 +11,22 @@ const app = express();
 const port = 5000;
 app.use(express.json());
 
+app.post('/api/woocommerce', async (req, res) => {
+	if (!req.body.website) {
+		res.status(402).json({ status: 402, message: "Are you fucking kidding me?" });
+	}
+
+	Woocommerce.main(req.body.website).then(result => {
+		if (!result.status) {
+			res.status(200).json({ status: 200, request: req.body.website, response: result });
+		} else {
+			res.status(200).json({ status: 400, request: req.body.website, message: result.message });
+		}
+	}).catch(error => {
+		res.status(200).json({ status: 400, request: req.body.website, message: 'Something fucked up.' });
+	});
+});
+
 app.post('/api/magento', async (req, res) => {
 	if (!req.body.website) {
 		res.status(402).json({ status: 402, message: "Are you fucking kidding me?" });
