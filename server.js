@@ -3,6 +3,7 @@ const express = require('express');
 
 // Scrap Commerce
 const Magento = require('./lib/magento');
+const Woocommerce = require('./lib/woocommerce');
 
 // Usage
 const app = express();
