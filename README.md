@@ -36,4 +36,4 @@ Open-source web scraping tool to accurately extract payment sources.
 
 | Parameter | Type     | Description                        |
 | :-------- | :------- | :--------------------------------- |
-| `website` | `string` | **Required**. Your magento website |
+| `website` | `string` | **Required**. Your website query   |
