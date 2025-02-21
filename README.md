@@ -29,11 +29,15 @@ Open-source web scraping tool to accurately extract payment sources.
 ```
   POST /api/magento
 ```
-
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `website` | `string` | **Required**. Your website query  |
 ```
   POST /api/woocommerce
 ```
 
-| Parameter | Type     | Description                        |
-| :-------- | :------- | :--------------------------------- |
-| `website` | `string` | **Required**. Your website query   |
+| Parameter | Type     | Description                                     |
+| :-------- | :------- | :---------------------------------------------- |
+| `website` | `string`  | **Required**. Your website query               |
+| `request` | `string`  | **Optional**. Set "rapid" for instant response |
+| `item`    | `boolean` | **Optional**. Set "true" for item scraping     |
