@@ -25,12 +25,8 @@ Open-source web scraping tool to accurately extract payment sources.
 ## API Reference
 
 #### Usage for Magento and Woocommerce
-
 ```
-  POST /api/magento
-```
-```
-  POST /api/woocommerce
+  POST /api/commerce
 ```
 
 | Parameter | Type      | Description                                  |
